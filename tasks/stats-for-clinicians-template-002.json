@@ -1,0 +1,35 @@
+{
+  "id": "stats-for-clinicians-template-002",
+  "title": "Explainer authoring template + curriculum map + 'not clinical advice' frame",
+  "project": "stats-for-clinicians",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Clinicians routinely misread oncology trial statistics (hazard ratios as simple risk ratios, non-significant p-values as 'no effect', surrogate endpoints as overall survival). Before authoring any explainer, the project needs one shared authoring template and a prioritized curriculum map that every explainer is a projection of. The template must make accuracy and provenance structural: every conceptual claim requires an authoritative-source citation, every worked-example number requires a committed reproducibility script, every explainer carries an explicit 'common trap' section and a standing 'educational, not clinical advice' frame, and a credentialed biostatistician sign-off is required before release. Methods education only — no treatment advice, no patient-facing content, no individual patient data; worked examples use open-access/aggregate/de-identified/synthetic data with each dataset's license verified.",
+  "objective": "Define and publish the canonical explainer authoring template and the prioritized curriculum map (HR and Kaplan-Meier first) that every authoring, review, and release task will use.",
+  "acceptanceCriteria": [
+    "Template defines all explainer fields: learningObjectives[], plainDefinition, preciseDefinition, workedExample {datasetRef, scriptRef, figures[], reproducible}, commonTrap[] {misreading, why_wrong, correct_reading}, howToReadInAPaper[], assumptionsAndLimits[], claims[] {statement, sourceRef, sourceType}, provenance {sources[], dataManifestRefs[], generatedFiguresChecksum}, framing, accessibility {altTextComplete, readabilityScore, colorblindSafeFigures}, review {statsReviewer, statsSignoff, clinicalReviewer, plainLanguageReviewer, status}, specVersions.",
+    "A required, structural 'educational, not clinical advice' framing field is mandatory on every explainer; patient-facing content and treatment/dosing advice are explicitly excluded and flagged as a separate riskTier:high deed.",
+    "Curriculum map enumerates the concept set (core survival analysis -> trial-reading -> advanced/bias), prioritized by how often each concept is misread, with hazard ratio and Kaplan-Meier sequenced first.",
+    "Template requires a sourceRef (authoritative methods source: peer-reviewed | textbook | guideline) for every conceptual claim and a scriptRef for every quantitative claim; uncited or unreproducible content is invalid by construction.",
+    "Each explainer must carry an explicit commonTrap section and a howToReadInAPaper checklist; biostatistician statsSignoff is required before status can become 'published'.",
+    "Template tooling is committed with golden valid/invalid fixtures exercised in CI; pnpm build && pnpm test && pnpm lint pass; commit DCO signed-off."
+  ],
+  "resources": [
+    "C:\\code\\elyos\\planning\\projects\\stats-for-clinicians\\PLAN.md",
+    "C:\\code\\elyos\\packages\\schema\\src\\schemas.ts",
+    "Reporting guidelines: CONSORT, SAMPL, STROBE, ICH E9; EQUATOR network",
+    "Recognized survival-analysis methods literature and textbooks (cited per-claim, never copied)",
+    "Open/synthetic example data: simulated survival datasets; license-verified open teaching survival datasets; open-access aggregate survival summaries"
+  ],
+  "output": "A published explainer authoring template plus a prioritized curriculum map and the standing 'not clinical advice' framing, committed to the project repo and ready for reuse by every authoring, review, and release task.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}
