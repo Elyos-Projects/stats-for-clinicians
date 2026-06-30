@@ -1,0 +1,34 @@
+{
+  "id": "stats-for-clinicians-reviewer-001",
+  "title": "Name/secure the biostatistician + licensing/provenance reviewers (blocking gate roles)",
+  "project": "stats-for-clinicians",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The stats-for-clinicians project requires a credentialed biostatistician/epidemiologist sign-off on every explainer before it ships — this is a zero-tolerance, non-skippable accuracy gate. Until at least one named, qualified reviewer is in place, authoring halts and no explainer can be published. A second named reviewer is strongly preferred to enable rotation and cross-checking. Similarly, a licensing & provenance reviewer must be named to verify that every example dataset has a verified open license and every conceptual claim is cited. These roles are the single most critical dependency for the entire project.",
+  "objective": "Identify and confirm at least one credentialed biostatistician or epidemiologist as the statistical-accuracy reviewer and at least one licensing/provenance reviewer before the M0 pilot is reviewed, and document their names, credentials, and agreement to serve in a committed role file.",
+  "acceptanceCriteria": [
+    "At least one named, credentialed biostatistician or epidemiologist has agreed to serve as the statistical-accuracy reviewer; their name, credentials (degree/affiliation/relevant experience), and confirmation of role are recorded in a committed document.",
+    "At least one named licensing & provenance reviewer has agreed to verify dataset licenses, claim citations, reproducibility, and no copyrighted-figure reuse; their name and confirmation of role are recorded.",
+    "The reviewer roster document is committed to the project repo (e.g. REVIEWERS.md or equivalent); it specifies the non-skippable nature of the stats sign-off gate and that a zero-falsehood rule applies.",
+    "If a rotation of >= 2 qualified statistical reviewers is secured, both are named; the document notes that >= 1 named reviewer must always exist or authoring halts.",
+    "The document is consistent with the authoring template's review block fields (statsReviewer, statsSignoff, clinicalReviewer, plainLanguageReviewer).",
+    "The steward/maintainer has acknowledged the reviewer roster and the authoring-halt condition in writing (e.g. a PR approval comment or a recorded meeting note)."
+  ],
+  "resources": [
+    "PLAN.md — Governance, roles & stakeholders section",
+    "TASKS.md — M0 blocking-gate description and reviewer-001 row",
+    "tasks/stats-for-clinicians-template-002.json — review block fields",
+    "Elyos good-deed definition: riskTier:medium requires credentialed reviewer sign-off"
+  ],
+  "output": "A committed reviewer-roster document (e.g. REVIEWERS.md) naming the statistical-accuracy reviewer(s) and the licensing/provenance reviewer(s), recording their credentials and agreement, and stating the non-skippable sign-off condition. The document unblocks all M0 explainer authoring and review tasks.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

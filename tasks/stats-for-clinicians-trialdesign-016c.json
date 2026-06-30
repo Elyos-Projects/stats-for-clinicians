@@ -1,0 +1,37 @@
+{
+  "id": "stats-for-clinicians-trialdesign-016c",
+  "title": "Explainers: subgroup/multiplicity, non-inferiority, forest plots & heterogeneity",
+  "project": "stats-for-clinicians",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Three trial-design and reporting topics generate persistent misreadings in oncology: (1) post-hoc subgroup analyses are frequently treated as confirmatory when they are hypothesis-generating and multiply-tested; (2) non-inferiority trials are often misread as equivalence trials, and the non-inferiority margin is rarely interrogated; (3) forest plots visualize subgroup HRs and heterogeneity, but the I-squared statistic and the interaction test are rarely interpreted correctly. These are M2 advanced topics that build on ci-pvalue-012 and absrel-nnt-014.",
+  "objective": "Author, biostatistician-sign-off, and publish explainers on subgroup analyses and multiplicity, non-inferiority and equivalence trials, and forest plots and heterogeneity — covering the mechanism of each potential misreading, how to detect it, and the correct interpretation — with reproducible worked examples on open/synthetic data.",
+  "acceptanceCriteria": [
+    "Subgroup/multiplicity explainer: plain and precise definition of a subgroup analysis; explicit commonTrap covering why post-hoc subgroup findings are hypothesis-generating (multiple comparisons inflate type I error; pre-specified vs post-hoc distinction matters); the interaction test as the correct test for subgroup effects; how many multiple comparisons are expected to yield p < 0.05 by chance.",
+    "Non-inferiority explainer: plain and precise definition of non-inferiority and the non-inferiority margin; explicit commonTrap covering: non-inferiority is not the same as equivalence; the margin choice is a clinical judgment that should be interrogated; a non-inferiority result means the new treatment is not worse by more than the margin, not that it is equivalent.",
+    "Forest plot/heterogeneity explainer: plain and precise definition of the forest plot, the pooled estimate, and heterogeneity (I-squared, Q statistic, tau-squared); commonTrap covering: I-squared alone does not quantify the magnitude of heterogeneity; visual inspection of whether CIs overlap is not a valid heterogeneity test.",
+    "Each topic has a worked example on open/synthetic data with a manifest entry; all figures and numbers emitted by committed scripts and diff-matched by repro-005.",
+    "Every conceptual claim cites an authoritative methods source; howToReadInAPaper checklists included for each topic.",
+    "Structural 'educational, not clinical advice' framing present; no specific trial verdict stated.",
+    "Biostatistician statsSignoff recorded; clinical-framing and accessibility reviews passed.",
+    "Zero stated statistical falsehoods; pnpm build && pnpm test && pnpm lint pass; DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-template-002.json — authoring template",
+    "tasks/stats-for-clinicians-ci-pvalue-012.json — CI vs p-value (prerequisite)",
+    "tasks/stats-for-clinicians-absrel-nnt-014.json — absolute vs relative risk (prerequisite)",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness",
+    "Reporting guidelines: CONSORT (subgroup analysis extension), PRISMA (heterogeneity), ICH E9; methods literature on non-inferiority design and forest plots (cited per-claim)"
+  ],
+  "output": "Published, biostatistician-signed-off explainers on subgroup/multiplicity, non-inferiority, and forest plots/heterogeneity, with 100% reproducible worked examples, full provenance, all claims cited, accessibility passed, and structural 'not clinical advice' frame.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

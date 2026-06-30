@@ -1,0 +1,34 @@
+{
+  "id": "stats-for-clinicians-patientfacing-022",
+  "title": "(GATED) Patient-facing plain-language versions of the explainers",
+  "project": "stats-for-clinicians",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "Patient-facing plain-language versions of the stats-for-clinicians explainers are explicitly out of scope for the current project. Any patient-facing rendering of statistical content is a separate high-risk deed requiring oncologist sign-off, patient-advocate sign-off, and a structural 'not medical advice' framing before any work may begin. This task entry exists in the backlog only as a gated placeholder to make the escalation boundary explicit and to prevent scope creep — it must not be worked until the high-risk prerequisites are fully satisfied. If this task is ever activated, a fresh deed must be scoped with oncologist and patient-advocate reviewers named, a 'not medical advice' frame required, and verifiedNeed confirmed with a patient-advocacy organization.",
+  "objective": "GATED — do not start without satisfying all prerequisites. If activated: produce patient-facing plain-language versions of the stats-for-clinicians explainers, adapted for a lay audience, with oncologist + patient-advocate sign-off and a structural 'not medical advice' frame.",
+  "acceptanceCriteria": [
+    "PREREQUISITE (must be satisfied before any work): a named, credentialed oncologist and a named patient-advocate reviewer have agreed to serve as sign-off reviewers for this task.",
+    "PREREQUISITE: a named patient-advocacy organization or patient-facing platform has confirmed it will adopt and use the patient-facing versions (verifiedNeed must be true before work starts).",
+    "PREREQUISITE: the scoping review has confirmed that no content will constitute medical advice, treatment recommendations, prognosis, or dosing guidance; the 'not medical advice' frame is structural (not a footnote) in every patient-facing document.",
+    "If all prerequisites are met: patient-facing versions are authored to a lay reading level (lower than the clinician/trainee versions) with simplified language, without sacrificing accuracy; a trained plain-language specialist reviews each version.",
+    "Oncologist sign-off and patient-advocate sign-off are both recorded before any patient-facing version is published.",
+    "No patient data is used; the statistical content is general methods education adapted for a lay audience, not patient-specific advice.",
+    "Biostatistician statsSignoff is also required (the accuracy gate remains non-skippable even for lay versions)."
+  ],
+  "resources": [
+    "PLAN.md — Scope (out of scope: patient-facing content); Quality gates (standing escalation to riskTier: high)",
+    "TASKS.md — patientfacing-022 backlog row (GATED marker)",
+    "Elyos good-deed definition: riskTier:high requires credentialed expert sign-off before work begins"
+  ],
+  "output": "GATED. If prerequisites are met: patient-facing plain-language explainer versions, oncologist + patient-advocate signed-off, with structural 'not medical advice' frame. Until prerequisites are met: no output; this task must not be started.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

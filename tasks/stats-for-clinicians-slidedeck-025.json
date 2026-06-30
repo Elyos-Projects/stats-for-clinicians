@@ -1,0 +1,35 @@
+{
+  "id": "stats-for-clinicians-slidedeck-025",
+  "title": "Slide/teaching-deck export for educators (from the explainer source)",
+  "project": "stats-for-clinicians",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education", "open-source-software"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Educators who want to teach from the stats-for-clinicians explainers in a lecture or workshop setting need a slide-deck export they can use directly, without having to manually convert Markdown explainers to presentation format. This backlog task adds a slide/teaching-deck export pipeline that generates a presentation-ready deck from the explainer source, deriving from the same prose and figures used in the Markdown version — no new statistical content, just a new output format. This task depends on adoption demand to justify the investment; it should not be started until >= 1 educator has expressed a need for this format.",
+  "objective": "Build and merge a slide/teaching-deck export pipeline that generates presentation-ready decks from the explainer source files, using the same prose and figures without introducing new statistical content, licensed CC-BY for the content.",
+  "acceptanceCriteria": [
+    "A pipeline generates presentation-ready slide decks from the explainer Markdown source using a standard open format (e.g. reveal.js HTML, Marp, or equivalent); the same figures from the reproducibility harness are reused without regenerating from scratch.",
+    "The pipeline does not introduce new statistical content; it is a rendering/format transformation of approved, biostatistician-signed-off explainer content.",
+    "The structural 'educational, not clinical advice' framing is present on the first and last slide of each deck.",
+    "Figures in the slide deck retain their alt-text and colorblind-safe palettes from the source explainer.",
+    "The deck source is CC-BY-4.0; the pipeline code is MIT; CI generates the deck as an artifact and verifies it renders without errors.",
+    "At least one educator has confirmed they would use this format before the task is started (demand-gate documented in the PR description).",
+    "pnpm build && pnpm test && pnpm lint pass; CI green; commit DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-release-019.json — release v1.0 (prerequisite: explainers to export)",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness (figures to reuse)",
+    "PLAN.md — Scope (slide/teaching-deck export listed as in-scope)",
+    "Open presentation frameworks: reveal.js, Marp, or equivalent"
+  ],
+  "output": "A merged MIT-licensed PR containing a slide/teaching-deck export pipeline that generates CC-BY-4.0 decks from explainer source files, with CI artifact generation, accessibility maintained, and the 'not clinical advice' frame on every deck.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

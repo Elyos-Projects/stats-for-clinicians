@@ -1,0 +1,37 @@
+{
+  "id": "stats-for-clinicians-bias-016b",
+  "title": "Explainers: immortal-time bias, lead-time bias, competing risks",
+  "project": "stats-for-clinicians",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Three specific biases routinely confound the interpretation of oncology observational studies and some trial analyses: immortal-time bias (patients must survive to receive treatment, so treatment arms appear to have better survival even if treatment is neutral); lead-time bias (earlier detection makes survival from diagnosis look longer even if death occurs at the same calendar time); and competing risks (a patient who dies of cardiac disease cannot die of cancer, so standard survival analysis overstates cancer-specific survival in the presence of competing causes). These are M2 advanced topics that build on km-006 and logrank-cox-011.",
+  "objective": "Author, biostatistician-sign-off, and publish explainers on immortal-time bias, lead-time bias, and competing risks — covering the mechanism of each bias, the study designs or analyses where it typically arises, how to detect it, and the correct analytical approach — with reproducible worked examples on open/synthetic data.",
+  "acceptanceCriteria": [
+    "Immortal-time bias explainer: plain and precise definition of immortal time; explicit commonTrap covering how it inflates apparent treatment benefit; description of how to recognize it in a study design (time-dependent exposure analysis); links to standard methods for correction.",
+    "Lead-time bias explainer: plain and precise definition; commonTrap covering why earlier detection can appear to lengthen survival without actually extending life; distinction between lead-time-adjusted and unadjusted survival estimates.",
+    "Competing risks explainer: plain and precise definition of competing risks; commonTrap covering how standard Kaplan-Meier analysis overestimates cumulative incidence in the presence of competing events (1 minus KM estimator bias); introduction of the cause-specific hazard and cumulative incidence function as alternatives.",
+    "Each bias has a worked example on open/synthetic data with a manifest entry; all figures and numbers emitted by committed scripts and diff-matched by repro-005.",
+    "Every conceptual claim cites an authoritative methods source; howToReadInAPaper checklists included for each bias.",
+    "Structural 'educational, not clinical advice' framing present; no specific trial verdict stated.",
+    "Biostatistician statsSignoff recorded; clinical-framing and accessibility reviews passed.",
+    "Zero stated statistical falsehoods; pnpm build && pnpm test && pnpm lint pass; DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-template-002.json — authoring template",
+    "tasks/stats-for-clinicians-km-006.json — KM and censoring (prerequisite)",
+    "tasks/stats-for-clinicians-logrank-cox-011.json — Cox regression (prerequisite for competing risks)",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness",
+    "Methods literature on immortal-time bias (Suissa), lead-time bias, competing risks (Fine & Gray, Geskus) — cited per-claim"
+  ],
+  "output": "Published, biostatistician-signed-off explainers on immortal-time bias, lead-time bias, and competing risks, with 100% reproducible worked examples, full provenance, all claims cited, accessibility passed, and structural 'not clinical advice' frame.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "stats-for-clinicians-i18nready-020",
+  "title": "Translation-readiness: text/figure separation + localization export",
+  "project": "stats-for-clinicians",
+  "type": "code",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education", "open-source-software"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "To enable translation of the explainers into other languages (synergy with the oncology-glossary-multilingual sibling project), explainer text must be separated from figure code so a localizer can translate the prose strings without touching the statistical computation. After string substitution, the same figure scripts should regenerate with the translated labels. This M3 task follows release-019 and makes the library translation-ready without requiring a full re-authoring effort for each language.",
+  "objective": "Refactor the explainer content structure to separate translatable text strings from figure/computation code, and produce a localization-ready export (e.g. a JSON or YAML message file per explainer) that a translator can work with — while ensuring figures regenerate correctly from the same scripts after string substitution.",
+  "acceptanceCriteria": [
+    "Translatable text strings (plain definitions, precise definitions, common trap text, checklist items, figure axis labels, alt-text, framing notices) are extracted from each explainer into a localization-ready export file (e.g. JSON or YAML) keyed by string ID.",
+    "Figure generation scripts are refactored to accept translatable string parameters (axis labels, titles, legends) rather than having them hardcoded, so figures regenerate with localized strings after substitution.",
+    "The English locale is committed as the reference locale; the export format is documented so a translator can contribute a new locale file without touching computation code.",
+    "The reproducibility harness (repro-005) continues to pass after the refactor; figures regenerated from the English locale strings match the pre-refactor checksums.",
+    "The export format and translation contribution workflow are documented in the project contributing guide (with a note about synergy with oncology-glossary-multilingual).",
+    "MIT-licensed; pnpm build && pnpm test && pnpm lint pass; CI green; commit DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-release-019.json — release v1.0 (prerequisite)",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness (must still pass after refactor)",
+    "PLAN.md — Sustainability & maintenance (translation-readiness); Scope (text/figure separation)",
+    "oncology-glossary-multilingual sibling project — potential consumer of the localization export"
+  ],
+  "output": "A merged MIT-licensed PR that separates translatable text from figure code, produces a localization-ready export for each explainer, and ensures CI and reproducibility still pass. The English reference locale is committed and the contribution workflow is documented.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

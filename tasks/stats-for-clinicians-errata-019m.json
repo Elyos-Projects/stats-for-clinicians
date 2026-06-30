@@ -1,0 +1,35 @@
+{
+  "id": "stats-for-clinicians-errata-019m",
+  "title": "Corrections/erratum process (versioned, attributed)",
+  "project": "stats-for-clinicians",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The stats-for-clinicians project applies a zero-tolerance rule on stated statistical falsehoods: any released explainer found to contain a statistical falsehood (or a wrong 'correction') is a release-failing defect that must be addressed with a versioned erratum. A public corrections mechanism is also a mark of scientific integrity — it signals that the project takes accuracy seriously and creates a path for any expert to flag an error without it being suppressed. This M3 task follows release-019 and establishes the erratum process before wider adoption makes errors harder to correct quickly.",
+  "objective": "Design and publish a corrections/erratum process that allows any reader to flag a statistical error, routes it to the biostatistician reviewer for verification, and produces a versioned, attributed erratum if confirmed — while superseding but not silently overwriting earlier versions.",
+  "acceptanceCriteria": [
+    "A public mechanism exists for anyone to flag a potential statistical error or misleading framing (e.g. a GitHub issue template labeled 'Statistical Correction Request' with a structured form: claim location, suspected error, proposed correction, supporting source).",
+    "The process specifies: within a defined SLA (e.g. 30 days), the biostatistician reviewer assesses the flagged claim and renders a decision (confirmed error / not an error / needs further review); the decision is recorded publicly.",
+    "A confirmed falsehood triggers a versioned erratum committed to the project repo: the erratum records the original claim, the correction, the source supporting the correction, the reviewer who confirmed it, and the date; the original version is marked as superseded (not silently overwritten).",
+    "A confirmed falsehood in one explainer triggers a review of related explainers for the same error pattern; the scope of that review is recorded.",
+    "Superseded versions remain accessible (e.g. via a git tag) and are clearly marked as superseded in any display; adopters who pinned a version are made aware via the erratum.",
+    "The erratum process is committed to the project repo (e.g. CORRECTIONS.md or equivalent) and referenced from the project README and from each explainer's review block.",
+    "The maintainer and biostatistician reviewer have approved the process document.",
+    "DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-release-019.json — release v1.0 (prerequisite: something to issue errata against)",
+    "PLAN.md — Sustainability & maintenance (corrections/errata section); Quality gates (zero-falsehood rule)",
+    "TASKS.md — errata-019m acceptance criteria"
+  ],
+  "output": "A committed corrections/erratum process document (e.g. CORRECTIONS.md), a public error-flagging mechanism (e.g. issue template), and a documented workflow for biostatistician review, versioned erratum publication, and related-explainer review. Approved by the maintainer and biostatistician reviewer.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

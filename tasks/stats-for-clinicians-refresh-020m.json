@@ -1,0 +1,34 @@
+{
+  "id": "stats-for-clinicians-refresh-020m",
+  "title": "Refresh process: updated guideline editions + dataset/toolkit drift",
+  "project": "stats-for-clinicians",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The stats-for-clinicians library pins its dependencies in specVersions: the authoring template version, curriculum-map version, toolkit version, each example dataset's snapshot/version, and the editions of cited guidelines (CONSORT, SAMPL, STROBE, ICH E9). When any of these are updated by their source authorities, the pinned versions may become stale — an explainer citing a superseded guideline edition or using an outdated dataset snapshot could silently drift from best practice. This M3 task defines the refresh process that detects and handles this drift, ensuring the library stays current without silent content changes.",
+  "objective": "Document and commit a refresh process that detects version drift in cited guideline editions, example datasets, and the toolkit, and defines a workflow for creating isolated version-bump tasks when drift is found — ensuring specVersions stays current and stale citations do not persist in released explainers.",
+  "acceptanceCriteria": [
+    "A committed refresh process document describes: how to check for updated editions of cited guidelines (CONSORT, SAMPL, STROBE, ICH E9, and others cited in specVersions); how to detect dataset snapshot drift (new version of an open teaching dataset, or a dataset's license changing); how to detect toolkit dependency drift.",
+    "The process specifies that each detected drift is handled as an isolated version-bump task (not a silent in-place content change); the task records the old version, the new version, what changed, and whether any explainer content is affected.",
+    "A named steward or maintainer is assigned ownership of the refresh process and a schedule or trigger for running the check is defined (e.g. at each new guideline publication, annually at minimum).",
+    "A CI check or periodic notification is set up to flag when any pinned dependency has a newer available version (where checkable automatically).",
+    "The refresh process document is committed to the project repo; it cross-references specVersions, the data manifest, and the erratum process (errata-019m).",
+    "DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-template-002.json — specVersions field",
+    "tasks/stats-for-clinicians-release-019.json — release v1.0 (defines what is being kept current)",
+    "tasks/stats-for-clinicians-toolkit-018.json — toolkit (dependency to monitor)",
+    "PLAN.md — Sustainability & maintenance (refresh process); Dependencies & integrations (version pinning)"
+  ],
+  "output": "A committed refresh process document describing how to detect and handle version drift in guideline editions, datasets, and toolkit, with a named steward assigned and a defined schedule or trigger for refresh checks.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "stats-for-clinicians-bayes-024",
+  "title": "Explainer: frequentist vs Bayesian reading of a result (intro)",
+  "project": "stats-for-clinicians",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Bayesian adaptive trial designs, Bayesian posterior probability statements, and hybrid Bayesian-frequentist reporting are increasingly appearing in oncology literature (especially in basket trials, adaptive platform trials, and regulatory submissions). Clinicians trained in frequentist reasoning need a plain-language introduction to what a Bayesian posterior probability means and how to read it, without this explainer becoming a full statistics course. Scope-guarding is critical: the goal is recognition and correct interpretation, not fluency in Bayesian computation. This is a backlog item that should not proceed if it risks becoming too dense for a general clinician audience.",
+  "objective": "Author, biostatistician-sign-off, and publish an introductory explainer on the frequentist vs Bayesian reading of a trial result — covering the core conceptual difference, how to read a posterior probability statement, and common traps — with scope-guarding against becoming a full statistics course.",
+  "acceptanceCriteria": [
+    "The explainer provides plain and precise definitions of the frequentist p-value (probability of data given H0) and the Bayesian posterior probability (probability of hypothesis given data + prior), with the conceptual difference stated clearly.",
+    "An explicit commonTrap section covers: misreading a Bayesian posterior probability as a p-value equivalent; assuming a 'probability of success' from a Bayesian adaptive trial is the same as a frequentist significance test.",
+    "The explainer stays at the level of recognition and correct interpretation, not Bayesian computation; a scope-guard note reminds authors this is an introduction, not a course — if the draft exceeds a defined length or requires prior elicitation to explain, it must be scoped back.",
+    "A simple worked example (e.g. a reported posterior probability from a published open-access Bayesian adaptive trial) is used to illustrate the reading; all figures and numbers emitted by committed script and diff-matched by repro-005.",
+    "Every conceptual claim cites an authoritative methods source; howToReadInAPaper checklist included.",
+    "Structural 'educational, not clinical advice' framing present.",
+    "Biostatistician statsSignoff recorded; clinical-framing and accessibility reviews passed.",
+    "Zero stated statistical falsehoods; pnpm build && pnpm test && pnpm lint pass; DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-template-002.json — authoring template",
+    "tasks/stats-for-clinicians-ci-pvalue-012.json — frequentist CI/p-value explainer (prerequisite for contrast)",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness",
+    "Methods literature on Bayesian clinical trials (cited per-claim); FDA guidance on Bayesian adaptive trial design"
+  ],
+  "output": "A published, biostatistician-signed-off introductory Bayesian vs frequentist explainer with 100% reproducible worked example, full provenance, all claims cited, accessibility passed, structural 'not clinical advice' frame, and explicit scope-guard that keeps it at an introductory level.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

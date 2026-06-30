@@ -1,0 +1,42 @@
+{
+  "id": "stats-for-clinicians-hr-004",
+  "title": "Explainer: hazard ratio + proportional-hazards assumption (highest-misread)",
+  "project": "stats-for-clinicians",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The hazard ratio is the single most commonly misread statistic in oncology trial reports. Clinicians routinely interpret a HR of 0.70 as '30% lower risk over the whole study period', when in fact a HR is an instantaneous, time-averaged relative hazard under a proportional-hazards assumption — not a simple risk ratio and not a constant risk reduction over time. When the proportional-hazards assumption fails (crossing survival curves), the HR becomes a misleading single-number summary and restricted mean survival time (RMST) is a more honest alternative. This explainer is the highest-priority pilot explainer for M0 and must be biostatistician-signed-off and clinical-framing-reviewed before release. It depends on the authoring template (template-002), the licensing/data gate (datagate-003), and the reproducibility harness (repro-005).",
+  "objective": "Author, biostatistician-sign-off, and publish the hazard ratio explainer — covering the precise definition, the 'not a simple risk ratio' common trap, the proportional-hazards assumption and how to check it, and an introduction to RMST as an alternative — with a fully reproducible worked example on open/synthetic data, complete provenance, and a structural 'not clinical advice' frame.",
+  "acceptanceCriteria": [
+    "The explainer provides both a plain definition (colleague-to-colleague) and a precise definition of a hazard ratio (instantaneous relative hazard, time-averaged under the proportional-hazards model).",
+    "An explicit commonTrap section corrects the most common misreading: HR is not a simple risk ratio; it is not a constant 'X% lower risk over the whole period'; it is an instantaneous, time-averaged relative hazard. Each trap entry includes misreading, why_wrong, and correct_reading.",
+    "The proportional-hazards assumption is stated in assumptionsAndLimits with a description of how to check it (e.g. log-log plots, Schoenfeld residuals) and what RMST offers when it fails.",
+    "A worked example is built on an open/synthetic dataset with a data manifest entry; every number and figure in the example is emitted by a committed script, diff-matched by the reproducibility harness (repro-005), and checksummed in provenance.generatedFiguresChecksum.",
+    "Every conceptual claim cites an authoritative methods source (peer-reviewed biostatistics, recognized textbook, or reporting guideline) in the claims[] array; no uncited statistical claim is present.",
+    "A howToReadInAPaper checklist is included (checkable items a clinician can apply when reading a trial reporting a HR).",
+    "Figures have complete alt-text; figures use colorblind-safe palettes; readability target is met for a clinician/trainee audience.",
+    "A structural 'educational, not clinical advice' framing field is present; no treatment-advice or patient-specific content appears.",
+    "Biostatistician statsSignoff is recorded in the review block; clinical-framing review is passed; plain-language/accessibility review is passed.",
+    "Zero stated statistical falsehoods: every definition, trap correction, and assumption is verified by the biostatistician reviewer.",
+    "pnpm build && pnpm test && pnpm lint pass on any committed tooling; commit is DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-template-002.json — authoring template (all required fields)",
+    "tasks/stats-for-clinicians-datagate-003.json — data gate and manifest for the worked example dataset",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness for worked-example figures",
+    "PLAN.md — Solution approach authoring pipeline; Data/licensing section",
+    "Reporting guidelines: CONSORT, SAMPL (statistical reporting guidelines), ICH E9",
+    "Recognized survival-analysis methods literature (cited per-claim, not copied)",
+    "Open/synthetic example data: synthetic survival dataset or license-verified open teaching survival dataset (manifest entry required)"
+  ],
+  "output": "A published, biostatistician-signed-off hazard ratio explainer committed to the project repo, with 100% reproducible worked example, complete provenance, every claim cited, accessibility passed, and a structural 'not clinical advice' frame. This is the M0 pilot explainer with the highest impact on correcting clinician misreading.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

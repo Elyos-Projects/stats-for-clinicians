@@ -1,0 +1,37 @@
+{
+  "id": "stats-for-clinicians-toolkit-018",
+  "title": "Interactive toolkit (KM generator + HR-under-non-PH simulator) on open/synthetic data",
+  "project": "stats-for-clinicians",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education", "open-source-software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "The stats-for-clinicians explainers are enhanced by showing, not just telling — a clinician who can manipulate a KM curve generator to see what happens when censoring increases, or who can see how a hazard ratio changes (or becomes misleading) under crossing survival curves, gains intuition that prose alone cannot convey. The toolkit is small, MIT-licensed, runs entirely on open/synthetic data (no patient data, no clinical calculation on a user's own data), and every widget carries the 'educational, not clinical advice' frame. It depends on repro-005 (reproducibility harness) and the pilot explainers (hr-004, km-006) for the concept validation.",
+  "objective": "Build and merge an MIT-licensed interactive toolkit with at minimum a Kaplan-Meier curve generator and an HR-under-non-proportional-hazards simulator, both running on open/synthetic data, with deterministic tested figures, accessibility, and the 'not clinical advice' frame on every widget.",
+  "acceptanceCriteria": [
+    "The KM-curve generator allows users to vary parameters (e.g. sample size, event rate, censoring fraction, number of groups) and renders a Kaplan-Meier curve with at-risk table and confidence intervals; all computation is on synthetic data generated deterministically from a committed seed.",
+    "The HR-under-non-proportional-hazards simulator allows users to see how the estimated HR changes as crossing time varies, illustrating that the HR is a misleading single-number summary when hazards cross; all computation is on synthetic data.",
+    "Neither widget performs clinical calculation on a user's own patient data; both run only on open/synthetic data generated within the tool.",
+    "Each widget carries a visible structural 'educational, not clinical advice' frame and links its source claims to the relevant explainer.",
+    "Figures are deterministic (same seed produces identical output), tested (golden output checksummed in CI), accessible (alt-text, colorblind-safe palettes), and reproducible under the repro-005 harness.",
+    "The toolkit is MIT-licensed; CI is green; pnpm build && pnpm test && pnpm lint pass; no embedded credentials or secrets.",
+    "At least one integration test demonstrates the full generate-figure pipeline from input parameters to checksummed output.",
+    "Commit DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness (prerequisite infrastructure)",
+    "tasks/stats-for-clinicians-hr-004.json — HR and proportional-hazards concepts (prerequisite for simulator)",
+    "tasks/stats-for-clinicians-km-006.json — KM and censoring concepts (prerequisite for generator)",
+    "PLAN.md — Solution approach (figure/interactive toolkit); Non-goals (no clinical calculation on user data)",
+    "Open statistical computation methods for KM estimation and Cox model; colorblind-safe palette libraries"
+  ],
+  "output": "A merged MIT-licensed interactive toolkit PR containing a KM-curve generator and an HR-under-non-PH simulator, both running on open/synthetic data, with deterministic tested figures, accessibility, CI green, and the 'not clinical advice' frame on every widget.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

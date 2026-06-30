@@ -1,0 +1,37 @@
+{
+  "id": "stats-for-clinicians-surrogate-rmst-016a",
+  "title": "Explainers: surrogate endpoints (PFS/DFS/ORR/pCR) vs OS + RMST",
+  "project": "stats-for-clinicians",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "In oncology trials, surrogate endpoints such as progression-free survival (PFS), disease-free survival (DFS), objective response rate (ORR), and pathological complete response (pCR) are used in place of overall survival (OS) because they are measurable sooner — but a drug that improves a surrogate does not automatically improve OS. The conditions under which a surrogate is trustworthy (validated surrogate correlation, biologically plausible mechanism, no off-target survival harm) are complex and often not communicated to the clinician reading the trial report. RMST (restricted mean survival time) is introduced in this explainer as an alternative summary of treatment effect when the proportional-hazards assumption fails, linking back to the HR explainer (hr-004). This is an M2 advanced topic depending on logrank-cox-011.",
+  "objective": "Author, biostatistician-sign-off, and publish explainers on surrogate endpoints vs OS and on RMST as an alternative to the HR when proportional hazards fails, with reproducible worked examples on open/synthetic data, explicit common traps, and a structural 'not clinical advice' frame.",
+  "acceptanceCriteria": [
+    "The surrogate endpoints explainer explains why a surrogate endpoint (PFS/DFS/ORR/pCR) is not automatically overall survival, and the conditions that make a surrogate trustworthy (validated correlation with OS; biologically plausible mechanism; no differential off-target effects); the explainer does not claim any specific drug's surrogate benefit implies survival benefit.",
+    "An explicit commonTrap section covers: assuming PFS improvement always translates to OS benefit; treating ORR as a survival endpoint; not accounting for the conditions under which a surrogate is validated.",
+    "The RMST section introduces RMST as an alternative summary when crossing survival curves make the HR a misleading single-number summary, with a plain and precise definition; links back to hr-004's proportional-hazards assumption discussion.",
+    "Worked examples for both surrogate endpoints and RMST are built on open/synthetic data with manifest entries; all figures and numbers emitted by committed scripts and diff-matched by repro-005.",
+    "Every conceptual claim cites an authoritative methods source; howToReadInAPaper checklists for both topics are included.",
+    "Structural 'educational, not clinical advice' framing present; no specific drug or trial verdict stated.",
+    "Biostatistician statsSignoff recorded; clinical-framing and accessibility reviews passed.",
+    "Zero stated statistical falsehoods; pnpm build && pnpm test && pnpm lint pass; DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-template-002.json — authoring template",
+    "tasks/stats-for-clinicians-hr-004.json — proportional-hazards assumption and RMST linkage",
+    "tasks/stats-for-clinicians-logrank-cox-011.json — log-rank and Cox (prerequisite)",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness",
+    "Methods literature on surrogate endpoint validation (Prentice criteria, IQWiG framework), RMST (Royston & Parmar, Uno et al.), reporting guidelines CONSORT (cited per-claim)"
+  ],
+  "output": "Published, biostatistician-signed-off explainers on surrogate endpoints vs OS and on RMST, with 100% reproducible worked examples, full provenance, all claims cited, accessibility passed, and structural 'not clinical advice' frame.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

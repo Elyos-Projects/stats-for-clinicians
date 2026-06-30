@@ -1,0 +1,35 @@
+{
+  "id": "stats-for-clinicians-provgate-015",
+  "title": "Provenance gate in CI (claims cited + datasets licensed)",
+  "project": "stats-for-clinicians",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education", "open-source-software"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The stats-for-clinicians project requires that every conceptual claim in every explainer has a resolvable sourceRef to an authoritative methods source, and that every example dataset is recorded in the data manifest with a permitted open license. These requirements are stated in the authoring template (template-002) and the data gate (datagate-003), but without automated enforcement they could be bypassed — an explainer with an uncited claim or an unlicensed dataset could merge. The provenance gate is a CI check that verifies these two constraints automatically, making provenance integrity a structural property of the build rather than a reviewer-dependent manual check.",
+  "objective": "Build and merge a CI provenance gate that verifies (1) every conceptual claim in each explainer has a resolvable sourceRef and (2) every example dataset is recorded in the data manifest with a permitted license — and fails the build on any uncited claim or unlicensed/unrecorded dataset.",
+  "acceptanceCriteria": [
+    "The provenance gate CI check verifies that every claims[] entry in every published/draft explainer has a non-empty sourceRef; build fails with a specific error if any claim has no sourceRef.",
+    "The gate verifies that every workedExample.datasetRef in every explainer corresponds to an entry in the data manifest (from datagate-003) with a license recorded and a redistribution-permitted status; build fails if any dataset is not in the manifest or has a missing/excluded license.",
+    "The gate also checks that every workedExample.scriptRef points to a committed file in the repo; build fails on a broken scriptRef.",
+    "The gate is MIT-licensed; CI is green on the existing project state (all existing explainers, if any, pass the gate).",
+    "The gate includes at least one golden test with a known-valid explainer and one with a known-invalid explainer (missing sourceRef / missing manifest entry) to verify the gate's own logic.",
+    "pnpm build && pnpm test && pnpm lint pass; commit DCO signed-off.",
+    "The gate is documented in the project contributing guide so authors know what will fail CI before opening a PR."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-template-002.json — authoring template (claims[], workedExample, provenance fields)",
+    "tasks/stats-for-clinicians-datagate-003.json — data manifest schema and PASS/EXCLUDE criterion",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness (complementary CI gate)",
+    "PLAN.md — Quality gates (Provenance gate)"
+  ],
+  "output": "A merged PR containing the CI provenance gate; the gate verifies every claim has a sourceRef and every dataset is in the manifest with a permitted license, failing the build on any violation. MIT-licensed. CI green.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
