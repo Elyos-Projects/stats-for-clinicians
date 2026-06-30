@@ -1,0 +1,35 @@
+{
+  "id": "stats-for-clinicians-comprehension-009",
+  "title": "Pre/post comprehension-check instrument + pilot on a reader group",
+  "project": "stats-for-clinicians",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The M0 success metric requires measurable comprehension improvement on >= 3 core misconceptions in a pilot cohort; M1 requires comprehension lift measured on >= 3 core misconceptions. Without a validated pre/post instrument, there is no evidence that the explainers actually correct the target misreadings — and 'written' without 'comprehension improved' fails the Elyos 'delivered, not merged' bar. This task designs the comprehension-check questions (covering at minimum HR, KM/censoring, and CI-vs-p-value misconceptions), pilots it on a real reader group (not self-reported), and records the results. This task depends on the M0 pilot explainers (hr-004, km-006) being available for readers.",
+  "objective": "Design a short pre/post misconception quiz covering at least the HR, Kaplan-Meier, and confidence-interval/p-value misconceptions, pilot it on >= 1 real reader group before and after reading the explainers, and record the comprehension change as a project outcome metric.",
+  "acceptanceCriteria": [
+    "A comprehension-check instrument is designed with >= 5 items covering at minimum three target misconceptions: (1) HR as a simple risk ratio or constant risk reduction, (2) reading KM curve tails without regard to at-risk numbers, (3) non-significant p-value as 'no effect' or significant as 'important/large effect'.",
+    "Each item is a scenario-based question (not a definition quiz) testing applied misinterpretation recognition; each item has a keyed correct answer and is reviewed by the biostatistician reviewer (reviewer-001) for correctness.",
+    "The instrument is piloted in pre/post format on >= 1 real reader group (not self-reported use); the group is identified and their participation is documented (role type: e.g. 'medical students', 'oncology fellows', 'journal club participants'; not names).",
+    "Pre and post scores are recorded and the difference per item is computed and committed; the results report states whether measurable improvement occurred on each of the >= 3 target misconceptions.",
+    "The instrument and results are committed to the project repo; the biostatistician reviewer has approved the instrument items as statistically correct before the pilot.",
+    "If measurable improvement is not observed on a misconception, that negative result is recorded honestly and the relevant explainer is flagged for revision.",
+    "The results are linked from the outcomes tracking document and contribute to the M0 definition of done ('comprehension check piloted on >= 1 reader group')."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-hr-004.json — HR pilot explainer",
+    "tasks/stats-for-clinicians-km-006.json — KM pilot explainer",
+    "PLAN.md — Success metrics (comprehension lift), M0 exit criteria",
+    "Literature on medical education pre/post misconception instruments; CONSORT reporting for educational interventions"
+  ],
+  "output": "A committed comprehension-check instrument (>= 5 items, biostatistician-approved) and a pilot results document recording pre/post scores on >= 1 real reader group, with comprehension change reported per misconception. Feeds the M0 definition of done.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "stats-for-clinicians-logrank-cox-011",
+  "title": "Explainers: log-rank test + Cox regression (assumptions & what it adjusts)",
+  "project": "stats-for-clinicians",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "The log-rank test and Cox proportional-hazards regression are the standard statistical tools in oncology survival trials, yet clinicians often misread their outputs. The log-rank test is widely misunderstood as a fully general test when it is actually optimized for proportional hazards and loses power under crossing survival curves. Cox regression is frequently misread as establishing causation when 'adjusted HR' means 'conditional on the model's covariates', not 'causal effect'. This explainer pair builds on hr-004 (proportional-hazards assumption) and km-006, and is part of the M1 core set.",
+  "objective": "Author, biostatistician-sign-off, and publish explainers for the log-rank test and Cox regression — covering what each tests, their shared proportional-hazards assumption, explicit common traps (log-rank loses power under crossing curves; 'adjusted HR' is not causal), and reproducible worked examples on open/synthetic data.",
+  "acceptanceCriteria": [
+    "The log-rank test explainer provides plain and precise definitions; an explicit commonTrap covers: low power under crossing survival curves (non-proportional hazards); misinterpreting a non-significant log-rank p-value as 'no difference in survival'.",
+    "The Cox regression explainer provides plain and precise definitions of 'adjusting for covariates'; an explicit commonTrap covers: interpreting 'adjusted HR' as a causal effect; treating the model as assumption-free; not checking proportional-hazards assumption for each covariate.",
+    "Assumptions and limits are stated for both: the proportional-hazards assumption (links to hr-004), independence of observations, no unmeasured confounders (Cox).",
+    "Worked examples for both log-rank and Cox are built on open/synthetic data with manifest entries; all figures and numbers emitted by committed scripts, diff-matched by repro-005.",
+    "Every conceptual claim cites an authoritative methods source; howToReadInAPaper checklists are included for both.",
+    "Figures have alt-text and colorblind-safe palettes; readability target met.",
+    "Structural 'educational, not clinical advice' framing present; no treatment-advice content.",
+    "Biostatistician statsSignoff recorded; clinical-framing and accessibility reviews passed.",
+    "Zero stated statistical falsehoods; pnpm build && pnpm test && pnpm lint pass; DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-template-002.json — authoring template",
+    "tasks/stats-for-clinicians-hr-004.json — proportional-hazards assumption (prerequisite)",
+    "tasks/stats-for-clinicians-km-006.json — KM and censoring (prerequisite)",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness",
+    "Reporting guidelines: CONSORT, SAMPL; ICH E9",
+    "Recognized survival-analysis and regression methods literature (cited per-claim)"
+  ],
+  "output": "Published, biostatistician-signed-off log-rank test and Cox regression explainers (may be one document or two), with 100% reproducible worked examples, full provenance, all claims cited, accessibility passed, and structural 'not clinical advice' frame.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "stats-for-clinicians-partner-013",
+  "title": "Secure first confirmed adopting beneficiary",
+  "project": "stats-for-clinicians",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The Elyos definition of shipped requires that explainers be adopted and used by a named beneficiary — verifiedNeed: false is the current portfolio-wide status until a training program, education committee, journal-club network, OER repository, or advocacy organization confirms it will adopt/teach from the explainers. This task follows the outreach work in outreach-008 and aims to convert an outreach thread into a named, confirmed adoption commitment. Once a beneficiary confirms adoption, all tasks for the adopted explainer set should have requestor set and verifiedNeed updated to true.",
+  "objective": "Secure a documented adoption commitment from a named training program, education committee, journal-club network, OER repository, or advocacy organization that confirms it will adopt and use the stats-for-clinicians explainers, and update the relevant task records to reflect verifiedNeed: true and a named requestor.",
+  "acceptanceCriteria": [
+    "A named training program, education committee, journal-club network, OER repository, or advocacy organization has confirmed in writing (email, issue comment, or equivalent documented exchange) that it will adopt and use the explainers.",
+    "The adoption mechanism is documented: how the explainers will be used (curriculum embed / journal-club kit / OER repository acceptance / advocacy training module / other).",
+    "An adoption evidence artifact (e.g. outcomes/<release-id>.json or an equivalent committed document) records: the beneficiary name, type, the adopted explainer set, the adoption mechanism, the date confirmed, and a link to the confirmation evidence.",
+    "The relevant task JSON files for the adopted explainer set are updated (or a PR is opened) to set verifiedNeed: true and requestor to the confirmed beneficiary name.",
+    "The steward has reviewed and committed the adoption evidence artifact.",
+    "If a formal partner cannot be secured in M1, a self-serve adoption by a verifiable third party (e.g. an educator who publishes a syllabus embedding the CC-BY explainer) is documented as an alternative path, and the evidence is recorded."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-outreach-008.json — partner shortlist and outreach log (prerequisite)",
+    "PLAN.md — Problem & beneficiaries; Definition of Shipped; Success metrics",
+    "TASKS.md — partner-013 acceptance criteria",
+    "Elyos good-deed definition: verifiedNeed and delivered bar"
+  ],
+  "output": "A committed adoption evidence artifact documenting a named beneficiary's confirmed adoption of the explainer set, plus updated task files setting verifiedNeed: true and requestor for the adopted tasks. Unlocks M1 definition of done.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

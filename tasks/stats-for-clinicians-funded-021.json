@@ -1,0 +1,35 @@
+{
+  "id": "stats-for-clinicians-funded-021",
+  "title": "Funded-lane batch authoring/computation run (budget-capped)",
+  "project": "stats-for-clinicians",
+  "type": "code",
+  "lane": "funded",
+  "priority": "low",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education", "open-source-software"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "If donated-compute throughput is insufficient for a batch authoring or computation run (e.g. generating all synthetic example datasets, running the full reproducibility harness across the set, or batch-drafting explainer scaffolding), the project may use the Elyos funded lane for a budget-capped, metered API execution run via packages/runner. This task uses an Anthropic API key supplied by the funder; the key must never be written to logs, receipts, or committed files. The hard per-task budget cap is enforced by the runner and must not be exceeded. The actual budget and scope of the funded run must be confirmed before this task is started.",
+  "objective": "Execute a funded-lane batch authoring or computation run within the hard budget cap using packages/runner, producing a PR with the batch output — without logging, committing, or exposing the API key at any point.",
+  "acceptanceCriteria": [
+    "The task runs exclusively via packages/runner with a hard per-task budget cap; the runner enforces the cap and the task never exceeds the escrow amount.",
+    "The Anthropic API key is supplied by the funder at runtime only; it is never written to logs, receipts, committed files, or any artifact in the repo.",
+    "The batch output (e.g. synthetic datasets, scaffolded explainer drafts, reproducibility computation results) is committed in a PR that passes all existing CI gates (repro-005 harness, provgate-015 provenance gate, pnpm build && pnpm test && pnpm lint).",
+    "The PR description records the total tokens consumed and cost against the budget cap, without including the API key or any secret.",
+    "All generated statistical content in the batch output is flagged as draft/unreviewed; no funded-lane output ships as published content without passing the biostatistician sign-off gate.",
+    "DCO signed-off on the PR.",
+    "The actual fundedBudgetUsd cap is confirmed and set before the task starts; the task must not proceed without a confirmed budget."
+  ],
+  "resources": [
+    "packages/runner — funded-lane runner with hard budget cap enforcement",
+    "PLAN.md — Security & privacy (funded lane, API key handling); Architecture rules (funded lane)",
+    "TASKS.md — funded-021 backlog row"
+  ],
+  "output": "A PR containing batch-generated output from the funded-lane run, within the confirmed budget cap, with all secrets handled correctly, all CI gates passing, and all generated statistical content marked as draft pending biostatistician review.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT",
+  "fundedBudgetUsd": 50.0
+}

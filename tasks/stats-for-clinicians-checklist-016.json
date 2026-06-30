@@ -1,0 +1,36 @@
+{
+  "id": "stats-for-clinicians-checklist-016",
+  "title": "\"How to read it in a paper\" checklist deck (journal-club/tumor-board ready)",
+  "project": "stats-for-clinicians",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Each individual explainer includes a howToReadInAPaper checklist section, but clinicians attending a journal club or tumor board need a compact, standalone checklist deck they can print or reference without reading the full explainer for each concept. This M2 task synthesizes the per-explainer checklists from at minimum hr-004, km-006, and ci-pvalue-012 into a short, usable reference deck organized by statistical concept — suitable as a journal-club facilitation tool or tumor-board reading aid. This does not introduce new statistical content; it is a synthesis and reformat of approved, biostatistician-signed-off checklist content.",
+  "objective": "Compile and publish a 'how to read it in a paper' checklist deck, synthesizing the per-explainer howToReadInAPaper checklists into a compact, standalone reference document organized by statistical concept, suitable for journal-club and tumor-board use.",
+  "acceptanceCriteria": [
+    "The checklist deck covers at minimum the howToReadInAPaper checklists from hr-004 (hazard ratio), km-006 (KM curves and censoring), and ci-pvalue-012 (CI vs p-values); additional checklists from other signed-off explainers may be included.",
+    "Each checklist card in the deck is derived entirely from biostatistician-signed-off explainer content; no new statistical claims are introduced in the deck itself.",
+    "The deck is formatted as a compact, practical reference (e.g. one concept per page/card) — printable, accessible, and usable without specialized tools.",
+    "Every item in the deck has a sourceRef traceable to its originating explainer; the deck references the explainers it synthesizes.",
+    "The structural 'educational, not clinical advice' framing is present in the deck header/footer; no treatment-advice content.",
+    "The deck is CC-BY-4.0 with attribution to sources; figures (if any) are alt-texted and colorblind-safe; readability target met.",
+    "Biostatistician statsSignoff and clinical-framing review are recorded for the deck (reviewing for any unintended new claims or framings introduced during synthesis).",
+    "DCO signed-off; accessible formats (e.g. Markdown and PDF) committed."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-hr-004.json — howToReadInAPaper checklist",
+    "tasks/stats-for-clinicians-km-006.json — howToReadInAPaper checklist",
+    "tasks/stats-for-clinicians-ci-pvalue-012.json — howToReadInAPaper checklist",
+    "tasks/stats-for-clinicians-template-002.json — authoring template (howToReadInAPaper field format)"
+  ],
+  "output": "A published CC-BY-4.0 'how to read it in a paper' checklist deck covering at minimum HR, KM/censoring, and CI/p-value topics, formatted for journal-club and tumor-board use, with biostatistician sign-off confirming no new statistical claims are introduced.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

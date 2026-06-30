@@ -1,0 +1,34 @@
+{
+  "id": "stats-for-clinicians-outreach-008",
+  "title": "Adopting-beneficiary outreach + partner shortlist (training programs, OER, advocacy)",
+  "project": "stats-for-clinicians",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The Elyos definition of shipped requires that explainers be adopted and used by a named beneficiary — an explainer library that no one teaches from is not a delivered good deed. Currently no named training program, education committee, journal-club network, OER repository, or advocacy organization has agreed to adopt the explainers (verifiedNeed: false portfolio-wide). M0 includes explicit outreach to de-risk the cold-start scenario. Even if a formal partner cannot be secured in M0, a published CC-BY explainer pair with checklist cards creates a self-serve fallback that an educator can adopt directly. This task produces a partner shortlist and opens at least one documented outreach thread.",
+  "objective": "Identify and document a prioritized shortlist of candidate adopting beneficiaries (training programs, education committees, journal-club networks, OER repositories, and advocacy organizations), and open at least one documented outreach thread with a candidate — providing the evidence trail that supports transitioning tasks to verifiedNeed: true once a partner confirms adoption.",
+  "acceptanceCriteria": [
+    "A committed shortlist document names >= 3 candidate adopting beneficiary types with specific example organizations or programs in each category: oncology residency/fellowship training programs and their education/critical-appraisal faculty; education committees of professional societies; open journal-club / evidence-based-medicine communities; OER medical-education repositories (MedEdPORTAL-style); patient-advocacy organizations that train advocates to read the science.",
+    "For each shortlisted candidate, the document records: name, type, contact approach, rationale for fit with the explainer set, and the adoption mechanism (curriculum embed / journal-club kit / OER repository acceptance).",
+    "At least one outreach thread is opened and documented: the communication channel, the contact, the date, the explainer set description shared, and the requested adoption commitment.",
+    "If a candidate declines or does not respond, that is documented as evidence (not suppressed); the self-serve fallback (published CC-BY explainer pair) is noted as the alternative path.",
+    "The outreach document and shortlist are committed to the project repo; the maintainer/steward has reviewed the outreach approach.",
+    "The task is prerequisite to partner-013 (secure first confirmed adopting beneficiary)."
+  ],
+  "resources": [
+    "PLAN.md — Problem & beneficiaries, Partner/requestor, Roadmap M0 cold-start",
+    "TASKS.md — outreach-008 row and verifiedNeed discussion",
+    "Students 4 Best Evidence-style networks; EQUATOR/reporting-guideline community contacts",
+    "OER medical education repositories; professional society education committees"
+  ],
+  "output": "A committed partner-shortlist and outreach-log document, with >= 3 candidate adopting beneficiaries shortlisted and >= 1 outreach thread opened and documented. This is the prerequisite evidence trail for partner-013 (securing the first confirmed beneficiary).",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,36 @@
+{
+  "id": "stats-for-clinicians-absrel-nnt-014",
+  "title": "Explainer: absolute vs relative risk + NNT/NNH",
+  "project": "stats-for-clinicians",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "One of the most consequential statistical misreadings in oncology is conflating relative risk reduction with absolute benefit. A '30% reduction in risk of death' sounds dramatic but may represent an absolute difference of only 2-3 percentage points if baseline risk is low, translating to a number-needed-to-treat of 33-50 patients — a very different clinical picture. This misreading affects how clinicians, patients, and payers perceive drug benefit and toxicity trade-offs. This explainer is part of the M1 core set and depends on template-002 and repro-005.",
+  "objective": "Author, biostatistician-sign-off, and publish the absolute vs relative risk and NNT/NNH explainer — covering the definitions, the relationship between them, the classic relative-vs-absolute misreading trap, and the correct interpretation of NNT and NNH — with a reproducible worked example on open/synthetic data.",
+  "acceptanceCriteria": [
+    "The explainer provides plain and precise definitions of absolute risk, relative risk, relative risk reduction, absolute risk reduction, number-needed-to-treat (NNT), and number-needed-to-harm (NNH) with their mathematical relationships stated.",
+    "An explicit commonTrap section corrects the classic misreading: a large relative risk reduction does not imply a large absolute benefit; the baseline risk determines how much absolute benefit the relative reduction translates to. Both the misleading presentation (relative only) and the correct interpretation (relative + absolute + NNT) are illustrated.",
+    "NNH is introduced alongside NNT so clinicians can evaluate benefit vs harm trade-offs rather than benefit alone.",
+    "A worked example on open/synthetic data has a manifest entry; all figures and numbers emitted by committed script and diff-matched by repro-005.",
+    "Every conceptual claim cites an authoritative methods source; howToReadInAPaper checklist included.",
+    "Structural 'educational, not clinical advice' framing present; the explainer does not advise whether any specific benefit/harm trade-off is worth it.",
+    "Biostatistician statsSignoff recorded; clinical-framing and accessibility reviews passed.",
+    "Zero stated statistical falsehoods; pnpm build && pnpm test && pnpm lint pass; DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-template-002.json — authoring template",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness",
+    "Reporting guidelines: CONSORT, SAMPL; EQUATOR network",
+    "Methods literature on NNT, absolute vs relative risk presentation (cited per-claim)"
+  ],
+  "output": "A published, biostatistician-signed-off absolute vs relative risk and NNT/NNH explainer with 100% reproducible worked example, full provenance, all claims cited, accessibility passed, and structural 'not clinical advice' frame.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "stats-for-clinicians-reuse-021m",
+  "title": "Track + verify external adoption/reuse events",
+  "project": "stats-for-clinicians",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "The M3 definition of done requires >= 3 verifiable external adoption/reuse events: a syllabus or journal-club kit embedding an explainer, an OER repository acceptance, or a documented training that uses the content. These must be externally verifiable, not self-reported. Tracking and verifying these events is a steward responsibility and is the primary outcome metric for the project — it distinguishes 'explainers written' (not success) from 'explainers taught from' (success). This task follows release-019 and partner-013.",
+  "objective": "Identify, verify, and document >= 3 external adoption/reuse events for the stats-for-clinicians explainer set, each linked to the consumed release version and the acceptance evidence artifact, as the primary outcome evidence for the M3 milestone.",
+  "acceptanceCriteria": [
+    ">= 3 verifiable external adoption/reuse events are documented; each event is one of: a syllabus or journal-club kit that embeds a specific explainer (with a URL or dated document); an OER repository acceptance record; a documented training event or curriculum module that uses the content.",
+    "Each event is externally verifiable — it links to a publicly accessible artifact (URL, repository record, published syllabus, meeting minutes) and cannot be verified only by the project team's assertion.",
+    "Each event record includes: the beneficiary name, the event type, the consumed explainer(s) and release version, a link to the verification artifact, and the date.",
+    "Each event is committed as an adoption evidence artifact in the project repo (e.g. outcomes/<event-id>.json) following the Elyos delivered-outcome artifact format.",
+    "The steward has reviewed and committed each evidence artifact; no self-reported-only use counts.",
+    "The cumulative adoption count is reflected in the project README or equivalent summary and reported against the success metrics from PLAN.md."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-release-019.json — release v1.0 (prerequisite: something to be adopted)",
+    "tasks/stats-for-clinicians-partner-013.json — first confirmed adopting beneficiary (expected to contribute >= 1 event)",
+    "tasks/stats-for-clinicians-outreach-008.json — partner shortlist (additional outreach targets)",
+    "PLAN.md — Success metrics; Definition of Shipped; M3 definition of done",
+    "TASKS.md — reuse-021m acceptance criteria"
+  ],
+  "output": "A set of >= 3 committed adoption evidence artifacts in outcomes/, each documenting a verifiable external adoption/reuse event with a link to external verification, plus a summary update to the project README reflecting the cumulative adoption count.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

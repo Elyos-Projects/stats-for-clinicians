@@ -1,0 +1,34 @@
+{
+  "id": "stats-for-clinicians-a11y-017",
+  "title": "Accessibility + readability pass (alt-text, colorblind-safe curves, reading level)",
+  "project": "stats-for-clinicians",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Each explainer should meet readability and accessibility standards so that the content is usable by clinicians and trainees with visual impairments, color vision deficiencies (colorblindness affects approximately 8% of men), and varying reading fluency. This task defines the accessibility and readability standards for the project, applies them to the pilot explainers (hr-004, km-006), and produces a reusable checklist and tooling guidance so that all subsequent explainers can self-assess. It depends on the pilot explainers being drafted so there is content to assess.",
+  "objective": "Define and document the project's accessibility and readability standards (alt-text requirements, colorblind-safe figure palettes, and target reading level), apply them to the pilot explainers, and publish a reusable accessibility checklist and tooling guidance for authors.",
+  "acceptanceCriteria": [
+    "The accessibility standards document specifies: alt-text requirements (every figure must have descriptive alt-text that conveys the statistical message of the figure, not just its visual description); colorblind-safe palette requirements (survival curves must use a palette distinguishable under deuteranopia and protanopia; specific approved palettes listed); and target reading level (e.g. Flesch-Kincaid grade level appropriate for a clinician/trainee audience).",
+    "The pilot explainers (hr-004, km-006) are reviewed against the standards and any gaps (missing alt-text, non-compliant color choices, above-target reading level) are documented and remediated.",
+    "A reusable per-explainer accessibility checklist (covering the three standards above) is committed and referenced from the authoring template's accessibility field.",
+    "Tooling guidance is provided (e.g. how to check reading level, which palette tool to use, how to validate alt-text) so authors can self-assess without needing a specialist for every explainer.",
+    "The plain-language/accessibility reviewer has approved the standards document and confirmed the pilot explainers meet them.",
+    "DCO signed-off; the standards document and checklist are committed to the project repo."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-hr-004.json — pilot explainer for standards application",
+    "tasks/stats-for-clinicians-km-006.json — pilot explainer for standards application",
+    "tasks/stats-for-clinicians-template-002.json — accessibility field in authoring template",
+    "WCAG 2.1 Level AA accessibility guidelines; colorblind-safe palette resources (e.g. Okabe-Ito, ColorBrewer)"
+  ],
+  "output": "A committed accessibility and readability standards document, a per-explainer accessibility checklist, tooling guidance for authors, and a record confirming the pilot explainers (hr-004, km-006) meet the standards.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

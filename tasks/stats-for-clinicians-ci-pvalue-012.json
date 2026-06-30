@@ -1,0 +1,36 @@
+{
+  "id": "stats-for-clinicians-ci-pvalue-012",
+  "title": "Explainer: confidence intervals vs p-values (and what each does/doesn't say)",
+  "project": "stats-for-clinicians",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Misinterpretation of p-values and confidence intervals is among the most persistent and consequential statistical errors in clinical medicine. Two classic traps drive the most harm in oncology: (1) a non-significant result (p > 0.05) is treated as proof of 'no effect' when it may simply reflect inadequate power; (2) a statistically significant result is treated as clinically important or large when significance depends entirely on sample size and the effect size may be trivial. CIs convey what p-values cannot: the range of effect sizes consistent with the data. This explainer is part of the M1 core set and depends on template-002 and repro-005.",
+  "objective": "Author, biostatistician-sign-off, and publish the CI vs p-value explainer — correcting the two classic misreadings, explaining what a CI conveys that a p-value does not, and providing a reproducible worked example on open/synthetic data — with a structural 'not clinical advice' frame and a howToReadInAPaper checklist.",
+  "acceptanceCriteria": [
+    "The explainer provides plain and precise definitions of the p-value (probability of data at least as extreme as observed, given H0 true), the confidence interval (range of values consistent with the data at the chosen confidence level), and their relationship.",
+    "An explicit commonTrap section corrects both classic misreadings: (1) non-significant p-value != 'no effect'; it may reflect insufficient power — the CI should be inspected for a clinically important effect that could not be ruled out; (2) statistically significant != clinically important or large — the effect size and CI width determine importance, not significance alone.",
+    "The explainer explains what a CI conveys that a p-value does not: the direction and magnitude of the estimated effect, the precision of the estimate, and whether clinically meaningful effect sizes are consistent with the data.",
+    "A worked example on open/synthetic data has a manifest entry; all figures and numbers emitted by committed script and diff-matched by repro-005.",
+    "Every conceptual claim cites an authoritative methods source (SAMPL guidelines, ASA statement on p-values, or equivalent); howToReadInAPaper checklist included.",
+    "Structural 'educational, not clinical advice' framing present; no treatment-advice content.",
+    "Biostatistician statsSignoff recorded; clinical-framing and accessibility reviews passed.",
+    "Zero stated statistical falsehoods; pnpm build && pnpm test && pnpm lint pass; DCO signed-off."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-template-002.json — authoring template",
+    "tasks/stats-for-clinicians-repro-005.json — reproducibility harness",
+    "Reporting guidelines: SAMPL (statistical analysis and methods in the published literature), CONSORT; ASA statement on p-values and statistical significance",
+    "Recognized biostatistics methods literature on CIs and p-values (cited per-claim)"
+  ],
+  "output": "A published, biostatistician-signed-off CI vs p-value explainer with 100% reproducible worked example, full provenance, all claims cited, accessibility passed, and structural 'not clinical advice' frame.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

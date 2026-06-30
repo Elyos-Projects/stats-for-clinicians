@@ -1,0 +1,36 @@
+{
+  "id": "stats-for-clinicians-datagate-003",
+  "title": "Licensing & data gate + per-dataset data manifest (open/synthetic only)",
+  "project": "stats-for-clinicians",
+  "type": "design-spec",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "Every worked example in a stats-for-clinicians explainer must use only open-access, aggregate, de-identified, or synthetic data — individual patient data, dbGaP/EGA/individual-level biobanks, and controlled-access records are categorically excluded. Before any explainer can author a worked example, the project needs an objective, enforceable licensing and data gate: a written policy defining exactly which data classes are in bounds and which are out, a PASS criterion for dataset usability, and a committed per-dataset data manifest that records each dataset's source, version, license, de-identification status, and redistribution permissions. This gate prevents a scenario where a subtly non-open or individual-level dataset slips into an example.",
+  "objective": "Author and commit the licensing & data gate policy and the per-dataset data manifest format, applying both to at least the pilot example datasets (hazard ratio and Kaplan-Meier examples), so that every subsequent explainer has an objective PASS/EXCLUDE criterion and a provenance trail for its example data.",
+  "acceptanceCriteria": [
+    "The gate document enumerates the in-bounds data classes: synthetic/simulated data we generate; license-verified openly-licensed teaching survival datasets (de-identified by construction); open-access aggregate survival/incidence summaries (e.g. SEER/GLOBOCAN-style); pseudo-data synthetic-by-construction from CC-BY/CC0 published Kaplan-Meier figures only.",
+    "The gate document explicitly enumerates the hard exclusions with no exceptions: individual patient data; dbGaP/EGA/individual-level biobanks; controlled-access tiers; identifiable patient records including individual-level rows in article supplementary files.",
+    "The objective PASS criterion is stated: a dataset is usable only if its license is recorded (id + evidence/URL) and permits our teaching use and redistribution where applicable; missing or unparseable license = EXCLUDE, never default-allow.",
+    "A committed data manifest schema is defined and at least the pilot datasets (for hr-004 and km-006) are entered with: source, version/snapshot, license (id + evidence URL), de-identification status, and whether redistribution/derivatives are permitted.",
+    "Curve-derived pseudo-data policy is explicit: synthetic-by-construction from CC-BY/CC0 figures only; labelled as synthetic; never claimed as real patients; never re-identifying.",
+    "A policy statement forbids reproducing copyrighted figures verbatim; the required alternative is recreating equivalent figures from open/synthetic data.",
+    "The gate and manifest are committed to the project repo and referenced from the authoring template (template-002) as a required pre-flight check before any explainer's worked example can be drafted.",
+    "The licensing/provenance reviewer (from reviewer-001) has approved the gate document before it is merged."
+  ],
+  "resources": [
+    "PLAN.md — Data, licensing & compliance section",
+    "TASKS.md — datagate-003 acceptance criteria",
+    "tasks/stats-for-clinicians-template-002.json — workedExample.datasetRef and provenance.dataManifestRefs fields",
+    "tasks/stats-for-clinicians-reviewer-001.json — licensing/provenance reviewer role"
+  ],
+  "output": "A committed licensing & data gate policy document and a data manifest (schema + at least two pilot dataset entries) that together provide an objective PASS/EXCLUDE criterion for every example dataset used in the project. Referenced by all explainer authoring tasks.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

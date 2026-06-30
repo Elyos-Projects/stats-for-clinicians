@@ -1,0 +1,39 @@
+{
+  "id": "stats-for-clinicians-release-019",
+  "title": "Release v1.0 (versioned + DOI, CC-BY content + MIT toolkit), core + advanced set",
+  "project": "stats-for-clinicians",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education"],
+  "riskTier": "medium",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "Release v1.0 is the M2 milestone deliverable: a versioned, DOI'd, CC-BY explainer set covering the full core and advanced concept curriculum, accompanied by the MIT interactive toolkit and the checklist deck. This release must meet the full quality bar — every explainer biostatistician-signed-off, 100% reproducible, fully cited, accessibility-passed, and with the 'not clinical advice' frame — before it ships. Only open/synthetic example data with verified licenses are included; no individual-patient data. The release is the first permanently citable, adopter-pinnable version of the library.",
+  "objective": "Package, version, and publish release v1.0 of the stats-for-clinicians explainer library, covering the core and advanced concept sets, with a DOI, CC-BY-4.0 content license, MIT toolkit license, and a complete release manifest recording specVersions and adoption evidence.",
+  "acceptanceCriteria": [
+    "The release covers the full core set (HR, KM/censoring, median survival, log-rank, Cox, CI vs p-value, absolute vs relative/NNT/NNH) and the advanced/bias set (surrogate endpoints + RMST, immortal-time/lead-time/competing risks, subgroup/multiplicity/non-inferiority/forest plots), plus the checklist deck and interactive toolkit.",
+    "Every explainer in the release is biostatistician-signed-off (statsSignoff recorded in the review block), 100% reproducible (repro-005 CI green), fully cited (provgate-015 CI green), accessibility-passed, and carries the structural 'not clinical advice' frame.",
+    "Only open/synthetic example data with verified licenses are included; the data manifest is complete for all example datasets; no individual-patient data is present; no copyrighted figures are reproduced.",
+    "The release is versioned as v1.0 and receives a DOI (e.g. via Zenodo or equivalent open DOI provider); the DOI is recorded in the release notes.",
+    "Content is released under CC-BY-4.0; toolkit code is MIT; redistributed datasets carry their upstream licenses as recorded in the manifest.",
+    "Release notes record specVersions: template version, curriculum-map version, toolkit version, each example dataset's snapshot/version and license, and cited-guideline versions (CONSORT/SAMPL/STROBE/ICH E9 editions).",
+    "At least one confirmed adopting beneficiary exists (from partner-013) or a documented self-serve adoption by a verifiable third party is recorded as part of the release evidence.",
+    "The steward has recorded the release as a delivered outcome artifact (outcomes/v1.0.json or equivalent)."
+  ],
+  "resources": [
+    "tasks/stats-for-clinicians-surrogate-rmst-016a.json",
+    "tasks/stats-for-clinicians-bias-016b.json",
+    "tasks/stats-for-clinicians-trialdesign-016c.json",
+    "tasks/stats-for-clinicians-toolkit-018.json",
+    "tasks/stats-for-clinicians-partner-013.json — confirmed adopting beneficiary (prerequisite)",
+    "PLAN.md — Definition of Shipped; release and adoption section",
+    "TASKS.md — release-019 acceptance criteria"
+  ],
+  "output": "A published, versioned, DOI'd v1.0 release of the stats-for-clinicians explainer library, with CC-BY-4.0 content, MIT toolkit, complete manifest, 100% reproducible and biostatistician-signed-off content, and a recorded adoption evidence artifact.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC-BY-4.0"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "stats-for-clinicians-repro-005",
+  "title": "Reproducibility harness (regenerate worked-example figures/numbers in CI)",
+  "project": "stats-for-clinicians",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["cancer-research", "biostatistics", "medical-education", "open-education", "open-source-software"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "A core quality guarantee of the stats-for-clinicians project is that every number and figure in every explainer is produced by a committed script on a cited open/synthetic dataset, and that CI can regenerate and diff-match those outputs at any time. Hand-typed statistics are forbidden: a statistic that the committed script does not emit cannot appear in an explainer. This reproducibility harness is a CI infrastructure component that makes that guarantee enforceable — it runs every example script, captures all emitted statistics and figures, and diff-matches them against the values published in each explainer. Any mismatch fails the build, preventing silent drift between the explainer prose and its computed backing.",
+  "objective": "Build and merge a reproducibility harness that CI uses to regenerate every worked-example figure/number from its committed script on its cited open/synthetic dataset and diff-match the published values, so that any mismatch between a script's output and an explainer's stated numbers fails the build.",
+  "acceptanceCriteria": [
+    "CI regenerates every worked-example figure and number from the committed script on the cited open/synthetic dataset; the harness diff-matches each emitted value against the value recorded in the explainer's provenance block, and any mismatch fails the build.",
+    "A statistic cannot appear in an explainer unless the harness can produce it from its script; figures are checksummed and the checksums are recorded in the explainer's provenance.generatedFiguresChecksum field.",
+    "The harness runs only on committed synthetic/open datasets (entries in the data manifest from datagate-003); attempting to run against a dataset not in the manifest fails the harness with an explicit error.",
+    "The harness is MIT-licensed; CI is green on the initial pilot scripts (at minimum the worked-example scripts for hr-004 and km-006 once those exist).",
+    "pnpm build && pnpm test && pnpm lint pass; commit is DCO signed-off.",
+    "The harness includes at least one golden fixture test (a committed script with known outputs) that validates the diff-matching logic itself."
+  ],
+  "resources": [
+    "PLAN.md — Solution approach step 4 (Reproducible computation), Quality gates (Reproducibility gate)",
+    "TASKS.md — repro-005 acceptance criteria",
+    "tasks/stats-for-clinicians-template-002.json — workedExample.reproducible and provenance.generatedFiguresChecksum fields",
+    "tasks/stats-for-clinicians-datagate-003.json — data manifest as input to the harness"
+  ],
+  "output": "A merged PR containing the reproducibility harness and its CI integration; the harness regenerates worked-example figures/numbers from committed scripts and diff-matches published values. MIT-licensed. CI green.",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
